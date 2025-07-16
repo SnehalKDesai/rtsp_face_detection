@@ -18,6 +18,6 @@ try:
     cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     print("Healthcheck passed")
     sys.exit(0)
-except:
-    print("Healthcheck failed: Model dummy inference failed")
+except Exception as e:
+    print(f"Healthcheck failed: Model dummy inference failed: {e}")
     sys.exit(1)
