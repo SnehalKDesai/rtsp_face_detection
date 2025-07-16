@@ -61,7 +61,7 @@ while saved_frames < 5:  # Save 5 annotated frames
     filename = os.path.join(output_dir, f"frame_{frame_count}.jpg")
     saved = cv2.imwrite(filename, frame)
     if saved:
-        logging.info(f" Saved frame to {filename}")
+        logging.info(f" Saved frame to i {filename}")
     else:
         logging.error(f" Failed to save frame to {filename}")
 
