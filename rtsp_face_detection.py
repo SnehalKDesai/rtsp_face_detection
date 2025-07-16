@@ -55,7 +55,7 @@ while saved_frames < 5:  # Save 5 annotated frames
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
     inference_time = time.time() - start_time
-    logging.info(f"Inference time: {inference_time:.2f} seconds, Faces detected::::::::: {len(faces)}")
+    logging.info(f"Inference time: {inference_time:.2f} seconds, Faces detected::: {len(faces)}")
 
     # Save annotated frame
     filename = os.path.join(output_dir, f"frame_{frame_count}.jpg")
