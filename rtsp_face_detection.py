@@ -28,7 +28,7 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fronta
 cap = cv2.VideoCapture(rtsp_url)
 
 if not cap.isOpened():
-    logging.error("Failed to connect to stream")
+    logging.error("Failed to connecttt to stream")
     exit()
 
 logging.info("Connected to stream")
