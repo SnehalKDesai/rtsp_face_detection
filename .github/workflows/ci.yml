@@ -46,7 +46,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: snldesai/rtsp-face-app:${{ github.sha }}
+          tags: |
+            snldesai/rtsp-face-app:latest
+            snldesai/rtsp-face-app:${{ github.sha }}
 
       - name: Simulate deployment
         run: echo "Container would be deployed using docker run -d SnlDesai/rtsp-face-app"
