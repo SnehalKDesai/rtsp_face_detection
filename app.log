@@ -1,0 +1,12 @@
+2025-07-17 07:56:15,950 - INFO - Connected to stream
+2025-07-17 07:56:16,546 - INFO - Inference time: 0.57 seconds, Faces detected::: 1
+2025-07-17 07:56:16,562 - INFO -  Saved frame to i output\frame_0.jpg
+2025-07-17 07:56:16,575 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 07:56:16,584 - INFO -  Saved frame to i output\frame_1.jpg
+2025-07-17 07:56:16,597 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 07:56:16,600 - INFO -  Saved frame to i output\frame_2.jpg
+2025-07-17 07:56:16,612 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 07:56:16,614 - INFO -  Saved frame to i output\frame_3.jpg
+2025-07-17 07:56:16,628 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 07:56:16,630 - INFO -  Saved frame to i output\frame_4.jpg
+2025-07-17 07:56:16,640 - INFO - Completed saving annotated frames.
