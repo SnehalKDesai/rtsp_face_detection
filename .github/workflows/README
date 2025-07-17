@@ -1,0 +1,88 @@
+1) Architecture Flow
+
+    RTSP Video Source with sample video
+                 |
+				 |
+	Inference Engine (Python source code)
+		         |
+				 |
+		Annotated Frames (Output Images)
+		         |
+				 |
+	Docker Containerized Application
+				 |
+				 |
+		GitHub Actions CI/CD
+				 |
+				 |
+		Docker Hub Image Push
+		
+		
+2) Setup Steps to Run the App and CI/CD Pipeline
+
+a) Prerequisites: 
+
+Make sure the following tools are installed:
+Python 
+Docker Desktop
+Git
+GitHub account with a repository
+Sample video file
+
+
+Step 1:
+Prepare the Python Project
+Write detection logic using OpenCV (in rtsp_face_detection.py)
+Test the code locally : python ./rtsp_face_detection.py
+
+Step 2:
+Dockerize the App
+Create a Dockerfile
+Build the image: docker build -t rtsp-face-app .
+Run the image with volume mount: docker run --rm -v "${PWD}/output:/app/output" rtsp-face-app
+
+Step 3:
+Push Code to GitHub
+git init
+git remote add origin <repo-url>
+git add .
+git commit -m "Commit Message"
+git push origin main
+
+Step 4: 
+Configure GitHub Secrets
+Go to GitHub repo -> Settings -> Secrets and variables -> Actions:
+DOCKER_USERNAME: your Docker Hub username
+DOCKER_PASSWORD: your Docker Hub access token
+
+Step5:
+GitHub Actions CI/CD Workflow
+.github/workflows/main.yml handles:
+Linting with flake8
+Docker image build
+Docker push to Docker Hub
+
+Step 6:
+Pull and Run Docker Image from Hub
+docker pull snldesai/rtsp-face-app:9715f2b67ff0c56c3eefbacdecd118befceb76be
+docker run -it -v "D:\New folder (2):/app/output" snldesai/rtsp-face-app:9715f2b67ff0c56c3eefbacdecd118befceb76be
+
+
+3) How the Pipeline Works: 
+
+Checkout Code: Retrieves the source code.
+Set up Python: Installs Python 3.11 environment.
+Lint the Code: Uses flake8 to check for syntax and style issues.
+Set up Docker: Initializes Docker Buildx for building images.
+Debug Secrets: Optional step to log if Docker secrets are missing.
+Docker Login: Authenticates to Docker Hub using secrets.
+Build & Push Image: Builds the image from Dockerfile and pushes it to Docker Hub with two tags:
+latest
+Specific Git commit SHA (for version tracking)
+Simulate Deployment: A placeholder to show where deployment would happen (e.g., Docker run command).
+
+4) Any challenges or decisions made
+a) As I have PC so didn't have a physical camera, I used a local video file with OpenCV to simulate the RTSP stream and test the detection logic.
+b) Faced some issues saving output images due to volume path differences on Windows. Fixed it by adjusting the path format correctly.
+c) Initially faced authentication issues due to confusion between Docker passwords and access tokens. Resolved by generating and using a Docker Hub Personal Access Token instead of the account password in GitHub Secrets.
+

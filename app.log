@@ -10,3 +10,15 @@
 2025-07-17 07:56:16,628 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
 2025-07-17 07:56:16,630 - INFO -  Saved frame to i output\frame_4.jpg
 2025-07-17 07:56:16,640 - INFO - Completed saving annotated frames.
+2025-07-17 09:41:49,991 - INFO - Connected to stream
+2025-07-17 09:41:50,180 - INFO - Inference time: 0.17 seconds, Faces detected::: 1
+2025-07-17 09:41:50,182 - INFO -  Saved frame to i output\frame_0.jpg
+2025-07-17 09:41:50,197 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 09:41:50,199 - INFO -  Saved frame to i output\frame_1.jpg
+2025-07-17 09:41:50,213 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 09:41:50,215 - INFO -  Saved frame to i output\frame_2.jpg
+2025-07-17 09:41:50,228 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 09:41:50,231 - INFO -  Saved frame to i output\frame_3.jpg
+2025-07-17 09:41:50,243 - INFO - Inference time: 0.01 seconds, Faces detected::: 1
+2025-07-17 09:41:50,245 - INFO -  Saved frame to i output\frame_4.jpg
+2025-07-17 09:41:50,251 - INFO - Completed saving annotated frames.
