@@ -5,7 +5,7 @@ import sys
 cap = cv2.VideoCapture('sample.mp4')
 
 if not cap.isOpened():
-    print("Healthcheck failed:: Cannot access video stream")
+    print("Healthcheck failed: Cannot access video stream")
     sys.exit(1)
 
 ret, frame = cap.read()
